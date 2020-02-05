@@ -1,5 +1,5 @@
 INCLUDE_DIR = include/
-COMPILE_ARGS = -std=c++17 -Wall -Wextra -ffunction-sections -fdata-sections -Og -g
+COMPILE_ARGS = -std=c++17 -Wall -Wextra -ffunction-sections -fdata-sections -Og -g -D TRACE_ENABLED
 SRC_FILES = src/*.cpp ./*.cpp
 
 all:

@@ -2,6 +2,7 @@
 
 #include <cassert>
 #include "display.h"
+#include "debug.h"
 
 
 void connect(Display& display, Pipe& pipe){
@@ -14,17 +15,16 @@ void Display::execute(){
 
     assert( pipe_ != nullptr );
 
-    std::cout << "Display::";
+    TRACE("Display::");
 
     if( !pipe_->is_empty() ){
 
         auto alarm = pipe_->pull();
 
 
-        std::cout << "Alarm: " << alarm << std::endl;
+        TRACELN("Alarm: " << alarm);
     }else {
-
-        std::cout << " Pipe is empty" << std::endl;
+        TRACELN(" Pipe is empty");
     }
     
 

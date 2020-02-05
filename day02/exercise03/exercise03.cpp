@@ -7,22 +7,28 @@
 
 int main(){
 
-    Pipe pipe { };
-    Display disp { };
     Generator gen { };
-
-
+    Display disp  { };
+    Pipe pipe     { };
+    
+    
     connect(disp, pipe);
     connect(gen, pipe);
 
+    // Generates an alarm and pushes it to the pipe
     gen.execute();
+    // Pulls the generated alarm and displays it
     disp.execute();
 
+    // Tries to display again, but there shouldn't be any more alarms to display
     disp.execute();
 
-    gen.execute();
+    for(int i { 0 } ; i < 5; i++){
 
-    disp.execute();
+        gen.execute();
+        disp.execute();
+
+    }
 
 
 
