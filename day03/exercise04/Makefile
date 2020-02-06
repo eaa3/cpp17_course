@@ -1,0 +1,13 @@
+INCLUDE_DIR = include/
+COMPILE_ARGS = -std=c++17 -Wall -Wextra -ffunction-sections -fdata-sections -Og -g -D TRACE_ENABLED
+SRC_FILES = src/*.cpp ./*.cpp
+
+all:
+	g++ $(COMPILE_ARGS) -I$(INCLUDE_DIR) -o exercise04 $(SRC_FILES)
+
+run: exercise04
+	./exercise04
+
+
+clean:
+	rm exercise04
