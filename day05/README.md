@@ -249,3 +249,6 @@ see crp.cpp
 
 
 Feabhas C++ Guidelines
+
+
+Go to the blog: blog.feabhas.com
