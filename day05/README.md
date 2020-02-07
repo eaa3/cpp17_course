@@ -240,3 +240,12 @@ int main() {
 
 
 ## Curiously recurring template pattern
+
+see crp.cpp
+
+
+## Readings
+
+
+
+Feabhas C++ Guidelines
